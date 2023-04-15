@@ -50,7 +50,8 @@ body, h1, h2, h3, p, ul, li {
 /* Style for navigation links */
 nav a {
     color: #000000;
-    margin-right: 50px;
+    margin-right: 100px;
+    right: -40px;
     text-decoration: none;
     text-align: center;
     position: relative; /* Add position relative for absolute positioning of pseudo elements */
@@ -73,4 +74,37 @@ nav a {
   nav a:hover::before {
     transform: scaleX(1); /* Scale to full width on hover */
   }
-  
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.typewriter {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  position: relative;
+}
+
+.typewriter::after {
+  content: '|';
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  animation: cursor 1s infinite;
+  opacity: 1;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0; /* make cursor blink */
+    }
+    50% {
+        opacity: 1;
+    }
+}
